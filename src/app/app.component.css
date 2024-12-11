@@ -1,0 +1,9 @@
+/* font-family: "Lilita One", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+nav{
+    font-family: "Lilita One", sans-serif;
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid black;
+    border-radius: 10px;
+}

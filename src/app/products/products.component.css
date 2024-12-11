@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+.size{
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+.container{
+    margin-top: 10px;
+    font-family: "Lilita One", sans-serif;
+}
+.card{
+    background-image: linear-gradient(to right,rgb(255, 251, 212),rgb(77, 74, 74));
+   
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: 1s;
+   
+}
+.card-body{
+ 
+    border-radius: 20px;
+}
+.btt{
+    background-image: linear-gradient(to right,rgb(255, 251, 212),rgb(77, 74, 74));
+    border: 3px solid rgb(0, 0, 0);
+   border-radius: 10px;
+   transition: 1s;
+ color: black;
+
+}
+.btt:hover{
+    scale: 1.1;
+    box-shadow: 0px 0px 20px 7px rgb(255, 255, 255);
+}
+.bscro{
+    animation: appear 5s linear;
+  animation-timeline: view();
+    animation-range: entry 0% ;
+ }
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.4;
+
+    }
+    to{
+opacity: 1;
+        scale: 1;
+        opacity: 1;
+
+    }
+}
+.card:hover{
+    box-shadow:1px 1px 20px 7px #EDEBE0;
+    scale: 1.05;
+}

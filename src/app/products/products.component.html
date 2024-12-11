@@ -1,0 +1,15 @@
+<div class="container ">
+    <div class="row">
+      <div class=" col-12 col-sm-6 col-md-4  " *ngFor="let product of products">
+        <div class="card bscro w-100 m-2 ">
+          <img [src]="product.image" class="card-img-top size " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.price }} MAD</p>
+            <button class="btn btt" (click)="addToCart(product)">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
