@@ -1,15 +1,64 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<i id="up"   class="btn fa-solid fa-arrow-up vv "></i>
+<a routerLink="/cart"><i id="crt" class="fa-solid fa-cart-shopping"></i></a>
+
+<div class="con">
+  <div id="a" class="row">
+  <div class="col-6 ect">
+    <div class="ecrit" >
+      <div>
+        <h1 id="ilyass-shop" class="text-center"></h1>
+        <br>
+    <p>Bienvenue chez ILYASS_SHOP ! 
+      Nous sommes ravis de vous 
+      accueillir dans notre boutique où qualité, style 
+      et satisfaction sont au cœur de nos priorités. Que 
+      vous soyez à la recherche des dernières tendances ou de produits essentiels, nous sommes là pour répondre à vos besoins avec une expérience d'achat unique. Merci de nous faire confiance, et profitez pleinement de votre visite !</p>
+<br>
+<img title="Chemise" class="pan" (click)="disp = !disp; chemis=!chemis" src="https://th.bing.com/th/id/OIP.U6cBaWvgmqhsK_9bwMJmCwHaLH?rs=1&pid=ImgDetMain" alt="">
+<img title="Pants" class="pan" (click)="disp = !disp; pant=!pant" src="https://th.bing.com/th/id/OIP.C1NIFQqA8RLc---Efn8R0gHaHa?rs=1&pid=ImgDetMain ">
+<img title="T-shirt" class="pan" (click)="disp = !disp; tsh=!tsh" src="https://th.bing.com/th/id/OIP.jVSSm4QsK2rFBgzBrAP_PwAAAA?rs=1&pid=ImgDetMain" alt="">
+<img title="Jacket" class="pan" (click)="disp = !disp; jck=!jck" src="https://contents.mediadecathlon.com/p2479535/bca51f9cc61a85b234ce9d9bb45d4775/p2479535.jpg" alt="">
+<img title="Sweat-shirt" class="pan" (click)="disp = !disp; swt=!swt" src="https://i5.walmartimages.com/asr/8d4adfd9-1be5-4095-af23-4286386d4df4_1.34dae0cf9e999539b799905fda4e16ab.jpeg" alt="">
+<img title="Chausseur" class="pan" (click)="disp = !disp; sho=!sho" src="https://th.bing.com/th/id/R.1cbab8cdc415a14d89e3e19ee5eae5d6?rik=ZP%2fBPcLBSPw16g&pid=ImgRaw&r=0" alt="">
+
+
+      </div>
+      
+  </div>
+  </div>
+  <div class="col-6 af "  >
+    <img id="affiche" [src]="imagee" alt="img">
+    <img id="sho" src="https://www.88gravity.com/website/img/digital-head-1.webp" >
+    <img id="sho1" src="https://th.bing.com/th/id/OIP.OAjGctqspLrOgQLGZ_0lagAAAA?rs=1&pid=ImgDetMain" alt="">
+
+
+  </div>
+    
+   
+   
+</div>
+
+</div>
+
+
+
 <div class="container ">
     <div class="row">
-      <div class=" col-12 col-sm-6 col-md-4  " *ngFor="let product of products">
-        <div class="card bscro w-100 m-2 ">
-          <img [src]="product.image" class="card-img-top size " alt="...">
+      <div class=" col-6 col-sm-6 col-md-4 col-lg-3  " *ngFor="let product of products">
+        <ng-container *ngIf="chemis==true && product.name == 'Chemise' || disp==true || pant==true && product.name == 'Pants' || swt==true && product.name == 'Sweat-shirt' || jck==true && product.name == 'Jacket'|| sho==true && product.name == 'Chausseur' || tsh==true && product.name == 'T-shirt' ">
+           <div class="card bscro w-100 m-2 ">
+          <img id="im" [src]="product.image" class="card-img-top size " alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.price }} MAD</p>
             <button class="btn btt" (click)="addToCart(product)">Ajouter au panier</button>
           </div>
         </div>
+        </ng-container>
+       
       </div>
     </div>
   </div>
+  
   

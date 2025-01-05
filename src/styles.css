@@ -16,7 +16,7 @@ body{
    
  }
  ::-webkit-scrollbar-thumb{
-     background: #F8BD97;
+     background: #000000;
      border-radius: 10px;
      
      
@@ -34,7 +34,7 @@ body{
 }
 
 .footer-container {
-    max-width: 80%;
+    max-width: 95%;
     margin: 0 auto;
     background-color: #faefeb42;
     border-radius: 10px;

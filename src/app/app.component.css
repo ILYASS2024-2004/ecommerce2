@@ -2,8 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 nav{
     font-family: "Lilita One", sans-serif;
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 2px;
     border: 4px solid black;
     border-radius: 10px;
+ position: absolute;
+    width: 99.5%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+ul{
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+   
+ 
+
+}
+a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+  
+    transition: 500ms linear;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+}
+ul li{
+    margin: 0px 25px;transition: 300ms ease-in-out;
+}
+.nv{
+    width: 70%;
+}
+li:hover, ul li a:hover{
+    color: white;
+    scale: 1.1;
+}
+i{
+    font-size: 16px;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 300ms ease-in-out;
+}
+.aaa{
+    text-shadow: 1px 2px 0px #000000,
+    1px -2px 0px #000000,
+    1px 2px 0px #000000,
+    1px -2px 0px #000000,
+    1px 3px 10px #fff8f8;
+    font-size: 20px;
+
+}
+
+@media  (max-width:600px){
+    
+   nav{
+    font-size: 10px
+   }
+   .aaa{
+    font-size: 10px;
+   }
+   i{
+    font-size: 10px
+   }
+
+} ;
+    
