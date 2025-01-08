@@ -8,7 +8,7 @@ nav{
     border-radius: 10px;
  position: absolute;
     width: 99.5%;
-    font-size: 18px;
+    font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,21 +35,29 @@ a:hover{
     color: rgb(0, 0, 0);
 }
 ul li{
-    margin: 0px 25px;transition: 300ms ease-in-out;
+    margin: 0px 25px;
+    transition: 300ms ease-in-out;
+}
+i{
+    cursor: pointer;
 }
 .nv{
     width: 70%;
 }
 li:hover, ul li a:hover{
-    color: white;
+    color: rgb(255, 255, 255);
     scale: 1.1;
 }
 i{
-    font-size: 16px;
+    font-size: 20px;
+    color: #000000; transition: 300ms ease-in-out;
+}
+i:hover{
+    color: #dad8d8;
 }
 ul li a{
     text-decoration: none;
-    color: #000;
+    color: #000000;
     transition: 300ms ease-in-out;
 }
 .aaa{
@@ -58,20 +66,33 @@ ul li a{
     1px 2px 0px #000000,
     1px -2px 0px #000000,
     1px 3px 10px #fff8f8;
-    font-size: 20px;
+    font-size: 24px;
 
 }
+.aaaa{
+    color: #000000;
+    text-shadow: 1px 2px 0px #ffffff,
+    1px -2px 0px #ffffff,
+    1px 2px 0px #ffffff,
+    1px -2px 0px #ffffff,
+    1px 3px 10px #000000;
+    font-size: 24px;
+}
 
-@media  (max-width:600px){
+@media  (max-width:700px){
     
    nav{
-    font-size: 10px
+    font-size: 15px
    }
    .aaa{
-    font-size: 10px;
+    font-size: 15px;
    }
    i{
-    font-size: 10px
+    font-size: 15px;
+  
+   }
+   ul li{
+    margin: 0px 10px;
    }
 
 } ;

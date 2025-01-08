@@ -13,7 +13,13 @@ export class CartComponent implements OnInit  {
     this.cart = this.productService.getCart();
 
   }
+  adplr(){
+    var audior:any=document.getElementById("rmo");
+    audior.play();
+   }
+    
   removeFormCart(product:any){
+    this.adplr()
     this.productService.removeFormCart(product);
   }
   getTotal(){

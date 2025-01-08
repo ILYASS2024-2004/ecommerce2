@@ -10,16 +10,30 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+  <div id="ilyass">
+    <i class="fa-brands fa-shopify fa-bounce"></i>
+    <br><br>
+   <h1 id="welcome" class="text-center" ></h1>
+    <br><br>
+
+     
+  </div>
+ 
+  <div id="con">
+
+
+ <app-root></app-root>
 
   <footer >
     
     <div class="footer-container aa">
+      Chemise <br>Pants <br> T-shirt <br> Sweat-Shirt <br> Jacket <br>Chausseur
+      
     <div class="fe">
         <p>Contactez-nous : <a href="mailto:ilyasselogri361@gmail.com">ilyasselogri361@gmail.com</a> / <a href="tel:+21268246594">+212********</a></p>
         <br>
       <div class="mn">
-        <p>Menu:</p>
+        <p>Contact:</p>
         <i class="fa-brands fa-whatsapp  ma"></i>
         <i class="fa-solid fa-phone-volume ma"></i>
         <i class="fa-solid fa-envelope ma"></i>
@@ -37,6 +51,45 @@
               </div>
       </div>
   </footer>
+ 
+
+  </div>
+  <script>
+    setTimeout(()=>{
+document.getElementById("ilyass").style.display='none';
+document.getElementById("con").style.display='block';
+},4510)
+
+
+
+function ch1(){
+    const text = "WELCOME TO ILYASS_SHOP";
+      const  h1Element= document.getElementById("welcome");
+       var index = 0;
+  
+      function writeText() {
+        h1Element.textContent += text[index];
+        index++;
+  
+        // Recommence si tout est écrit
+        if (index === text.length) {
+          index = 0; // Réinitialise l'index pour un effet infini
+          setTimeout(() => {
+            h1Element.textContent = ""
+            h1Element.innerHTML = `<br>`
+            // Efface le texte avant de recommencer
+          }, 100); // Pause avant de recommencer
+        }
+      }
+  
+      setInterval(writeText, 200);
+  
+  }
+  ch1();
+
+
+
+  </script>
  
 </body>
 </html>

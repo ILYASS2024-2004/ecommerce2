@@ -1,8 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Lilita+One&display=swap');
+
 body{
     background-image: linear-gradient(to right,#30393E,#988F88);
+        /* background-image: linear-gradient(to right,#262a2c,#988F88); */
+
     font-family: "Lilita One", sans-serif;
+}
+#con{
+    display: none;
+}
+#ilyass{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    height: 100dvh;
+   background-image: linear-gradient(to right,black,rgb(2, 2, 2),rgb(8, 8, 8));
+
+}
+#ilyass i{
+    color: white;
+   font-size: 220px;
+
+}
+#ilyass h1{
+    font-family: "Kavoon", serif;
+    color: white;
+    text-shadow: 0px 0px 10px rgb(180, 176, 176);
+
 }
 ::-webkit-scrollbar{
     width: 8px;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +10,7 @@ import { ProductService } from '../product.service';
 export class ProductsComponent implements OnInit {
   products: any[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService ,public di :AppComponent) {}
   chan(){
 
     var up1:any = document.getElementById('up');
@@ -79,14 +80,33 @@ export class ProductsComponent implements OnInit {
       setInterval(writeText, 500);
   
   }
-  
+
+    display: boolean = false; // Variable locale
   ngOnInit() {
     this.products = this.productService.getProducts();
     this.chan();
     this.ch();
-     
+
+  
+      // Synchronise la variable locale avec la valeur du service
+      this.productService.display$.subscribe((value) => {
+        this.display = value;
+      });
+    
+  
+  
+
+  }
+  isVisible: boolean=false;
+  showch(){
+    this.isVisible=true;
+    setTimeout(()=>{
+      this.isVisible=false;
+    },600)
+
   }
 
+  
 pant=false;
  chemis=false;
  disp=true;
@@ -96,11 +116,21 @@ pant=false;
  jck=false;
 
 
- 
+ i=0;
+ adpl(){
+  var audio:any=document.getElementById("aud");
+  audio.play();
+ }
   
  imagee= 'https://shop.rnli.org/cdn/shop/files/rnli-finisterre-fisherman-beanie-ecru-navy-rs2342112env-29583843426400_x1400.jpg?v=1696330665'
   addToCart(product: any) {
     this.productService.addTocart(product);
+   this.i++;
+    this.adpl();
+   this.showch();
+  
+   
+
   }
  
 }

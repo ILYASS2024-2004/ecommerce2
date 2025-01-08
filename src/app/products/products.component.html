@@ -1,13 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<div [ngClass]="display ? 'bac':''" >
+  <div *ngIf="isVisible"  class="chec"><i id="hon" class="fa-solid fa-circle-check"></i></div>
+  
 <i id="up"   class="btn fa-solid fa-arrow-up vv "></i>
-<a routerLink="/cart"><i id="crt" class="fa-solid fa-cart-shopping"></i></a>
+<a routerLink="/cart"><i id="crt" class="fa-solid fa-cart-shopping"><span>{{i}}</span></i></a>
 
 <div class="con">
+  
+  <audio id="aud" src="../../assets/aa.mp3" type="audio/mp3"></audio>
   <div id="a" class="row">
   <div class="col-6 ect">
-    <div class="ecrit" >
+    <div class="ecrit" [ngClass]="display ? 'ecritee':'ecrit'"   >
       <div>
-        <h1 id="ilyass-shop" class="text-center"></h1>
+      
+        <h1 id="ilyass-shop" class="text-center "></h1>
         <br>
     <p>Bienvenue chez ILYASS_SHOP ! 
       Nous sommes ravis de vous 
@@ -15,12 +21,20 @@
       et satisfaction sont au cœur de nos priorités. Que 
       vous soyez à la recherche des dernières tendances ou de produits essentiels, nous sommes là pour répondre à vos besoins avec une expérience d'achat unique. Merci de nous faire confiance, et profitez pleinement de votre visite !</p>
 <br>
+<br>
 <img title="Chemise" class="pan" (click)="disp = !disp; chemis=!chemis" src="https://th.bing.com/th/id/OIP.U6cBaWvgmqhsK_9bwMJmCwHaLH?rs=1&pid=ImgDetMain" alt="">
 <img title="Pants" class="pan" (click)="disp = !disp; pant=!pant" src="https://th.bing.com/th/id/OIP.C1NIFQqA8RLc---Efn8R0gHaHa?rs=1&pid=ImgDetMain ">
+
 <img title="T-shirt" class="pan" (click)="disp = !disp; tsh=!tsh" src="https://th.bing.com/th/id/OIP.jVSSm4QsK2rFBgzBrAP_PwAAAA?rs=1&pid=ImgDetMain" alt="">
-<img title="Jacket" class="pan" (click)="disp = !disp; jck=!jck" src="https://contents.mediadecathlon.com/p2479535/bca51f9cc61a85b234ce9d9bb45d4775/p2479535.jpg" alt="">
-<img title="Sweat-shirt" class="pan" (click)="disp = !disp; swt=!swt" src="https://i5.walmartimages.com/asr/8d4adfd9-1be5-4095-af23-4286386d4df4_1.34dae0cf9e999539b799905fda4e16ab.jpeg" alt="">
+  <img title="Jacket" class="pan" (click)="disp = !disp; jck=!jck" src="https://contents.mediadecathlon.com/p2479535/bca51f9cc61a85b234ce9d9bb45d4775/p2479535.jpg" alt="">
+
+
+  <img title="Sweat-shirt" class="pan" (click)="disp = !disp; swt=!swt" src="https://i5.walmartimages.com/asr/8d4adfd9-1be5-4095-af23-4286386d4df4_1.34dae0cf9e999539b799905fda4e16ab.jpeg" alt="">
+
+
 <img title="Chausseur" class="pan" (click)="disp = !disp; sho=!sho" src="https://th.bing.com/th/id/R.1cbab8cdc415a14d89e3e19ee5eae5d6?rik=ZP%2fBPcLBSPw16g&pid=ImgRaw&r=0" alt="">
+
+
 
 
       </div>
@@ -29,9 +43,13 @@
   </div>
   <div class="col-6 af "  >
     <img id="affiche" [src]="imagee" alt="img">
-    <img id="sho" src="https://www.88gravity.com/website/img/digital-head-1.webp" >
+
+  <img id="sho" src="https://www.88gravity.com/website/img/digital-head-1.webp" >
+ 
+    
     <img id="sho1" src="https://th.bing.com/th/id/OIP.OAjGctqspLrOgQLGZ_0lagAAAA?rs=1&pid=ImgDetMain" alt="">
 
+  
 
   </div>
     
@@ -41,17 +59,32 @@
 
 </div>
 
+<section *ngIf="disp"  class="best-sales">
+  <h1 class="title">Nos ventes</h1>
+  <div class="best-sales-pro">
+    <div class="div1"><img src="https://i.pinimg.com/736x/38/9b/b4/389bb4540bf23de7a051a73e78476516.jpg" alt=""></div>
+    <div class="div2"><img src="https://i.pinimg.com/736x/62/aa/86/62aa86bb02b4bdf79df014387afcfedb.jpg" alt=""></div>
+    <div class="div3"><span>Fashion</span></div>
+    <div class="div4"><span>ILYASS_SHOP</span></div>
+    <div class="div5"><span>THE BEST</span></div>
+    <div class="div6"><img src="https://i.pinimg.com/736x/a6/0e/d7/a60ed72845978e2f230ca4ef627e9887.jpg" alt=""></div>
+    <div class="div7"><span>Commandez NOW</span></div>
+  </div>
+</section>
 
+
+<br>
+<h1 class="title">Nos Produits</h1>
 
 <div class="container ">
     <div class="row">
       <div class=" col-6 col-sm-6 col-md-4 col-lg-3  " *ngFor="let product of products">
-        <ng-container *ngIf="chemis==true && product.name == 'Chemise' || disp==true || pant==true && product.name == 'Pants' || swt==true && product.name == 'Sweat-shirt' || jck==true && product.name == 'Jacket'|| sho==true && product.name == 'Chausseur' || tsh==true && product.name == 'T-shirt' ">
+        <ng-container *ngIf="chemis==true && product.name.includes('Chemise') || disp==true || pant==true && product.name.includes('Pantalon') || swt==true && product.name.includes('Sweat-shirt') || jck==true && product.name.includes('Jacket')|| sho==true && product.name.includes('Chausseur') || tsh==true && product.name.includes('T-shirt') ">
            <div class="card bscro w-100 m-2 ">
           <img id="im" [src]="product.image" class="card-img-top size " alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">{{ product.price }} MAD</p>
+            <p class="card-text">{{ product.price }} MAD </p>
             <button class="btn btt" (click)="addToCart(product)">Ajouter au panier</button>
           </div>
         </div>
@@ -62,3 +95,4 @@
   </div>
   
   
+</div>

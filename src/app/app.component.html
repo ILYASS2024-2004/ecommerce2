@@ -15,7 +15,7 @@
 <nav >
 
  
-  <a class="aaa" routerLink="/">EL-OGRI_ECOMMERCE</a>
+  <a class="aaa" [ngClass]="display ? 'aaaa': 'aaa'"  routerLink="/">EL-OGRI_ECOMMERCE</a>
   <ul>
   
    
@@ -24,6 +24,8 @@
       routerLink="/cart">Paniers</a></li>
     <li><i class="fa-solid fa-phone"></i></li>
     <li><i class="fa-solid fa-envelope"></i></li>
+   
+    <li><i (click)="toggleDisplay()" [ngClass]="display ? 'fa-solid fa-moon': 'fa-solid fa-sun'" ></i></li>
   </ul>
 </nav>
 
