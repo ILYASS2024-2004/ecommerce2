@@ -1,36 +1,56 @@
 <br><br><br>
+<canvas id="fireworks-canvas"></canvas>
 <h1>Remplissez ce formulaire:</h1>
+
 <br><br><br>
 <div class="cont">
-    <form >
+    <div class="form" >
         <h2>Formulaire de commande :</h2>
 
-      <div class="d"><label class="f" for="nom">Nome</label><input placeholder="Entrez votre prénom" id="nom" type="text"  required></div>
-      <div class="d">      <label for="pnom">Prénome</label><input id="pnom" type="text" placeholder="Entrez votre prénom" required  >
+      <div class="d"><label class="f" for="nom">Nome</label><input   [(ngModel)]="username" placeholder="Entrez votre prénom" id="nom" type="text" required ></div>
+      <div class="d">      <label for="pnom">Prénome</label><input [(ngModel)]="pnom1"  id="pnom" type="text" placeholder="Entrez votre prénom" required  >
 
 
       </div>
       <div class="d">
-              <label for="pnum">Numéro</label><div class="pnum"><input id="pnum"  [(ngModel)]="inputnum" (input)="onch()" placeholder="Numéro de téléphone" type="tel" required  ></div>
+              <label for="pnum">Numéro</label><div class="pnum"><input id="pnum"  placeholder="Numéro de téléphone" type="tel" required  ></div>
 
       </div>
+      <div class="d">
+        <label>Ville</label>
+           <!-- <input class="form-control" placeholder="Choisir une ville" list="browsers" name="browser" id="browser">
+           <datalist id="browsers">
+             <option value="Fés">
+             <option value="Méknes">
+             <option value="Casablanca">
+             <option value="Agadir">
+             <option value="Tanger">
+                 <option value="Marakech"></option>
+                 <option value="Oujda"></option>
+                 <option value="Tetouane"></option>
+                 <option value="Houcima"></option>
+                
+           </datalist>  -->
+           <select>
+            
+            <option value="Fés">Fés</option>
+              <option value="Méknes">Méknes</option>
+              <option value="Casablanca">CasaBlanca</option>
+              <option value="Agadir">Agadir</option>
+              <option value="Tanger">Tanger</option>
+                  <option value="Marakech">Marakech</option>
+                  <option value="Oujda">Oujda</option>
+                  <option value="Tetouane">Tetouane</option>
+                  <option value="Houcima">Houcima</option>
+                  <option value="Houcima">Dakhla</option>
+                  <option value="Houcima">Nadour</option>
+                  <option value="Houcima">Rabat</option>
+
+           </select>
+         
+   </div>
       
-      <div class="d">
-           <label>Ville</label>
-              <input class="form-control" placeholder="Choisir une ville" list="browsers" name="browser" id="browser">
-              <datalist id="browsers">
-                <option value="Fés">
-                <option value="Méknes">
-                <option value="Casablanca">
-                <option value="Agadir">
-                <option value="Tanger">
-                    <option value="Marakech"></option>
-                    <option value="Oujda"></option>
-                    <option value="Tetouane"></option>
-                    <option value="Houcima"></option>
-                   
-              </datalist> 
-      </div>
+     
               
 
  <i class="fa-brands fa-shopify "></i>
@@ -38,10 +58,13 @@
 
  <div class="valider">
     <h4 class="text-light ">Total : {{ getTotal() }} MAD</h4>
-    <button class="btn btn-success">Acheter</button>
+    <button class="btn btn-success" (click)="launchFireworks()" >Acheter</button>
   </div>
 
-    </form>
 </div>
+</div>
+
+
+<p  [ngClass]="disp? 'vs':'nvs'">Félicitation {{pnom1}} {{  username  }}, vous recevrez un appel dans les 24 heures pour la confirmation finale de commande </p>
 <br><br>
 <br>

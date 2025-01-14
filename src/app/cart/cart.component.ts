@@ -24,14 +24,25 @@ export class CartComponent implements OnInit  {
        this.isVisible1=false;
      },600)}
     
-  removeFormCart(product:any){
+  removeFromCart(product:any){
     this.adplr()
-    this.productService.removeFormCart(product);
+    this.productService.removeFromCart(product);
     this.showch1();
   }
-  getTotal(){
-    return this.cart.reduce((sum,item)=> sum + item.price ,0);
-  }
+  // getTotal(){
+  //   removeFromCart(product: any) {
+  //     this.productService.removeFromCart(product);
+  //     // Met à jour la liste du panier après suppression
+  //     this.cart = this.productService.getCart();
+  //   }
+  
+    getTotal() {
+      return this.cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+    }
+  
 
 
 }

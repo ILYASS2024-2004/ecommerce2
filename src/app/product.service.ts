@@ -9,7 +9,7 @@ export class ProductService {
     {  name: 'Chemise homme xl xxl' , price :150 , image: 'https://i.pinimg.com/736x/e9/31/34/e931343c6bc6706560602d4a177df83b.jpg'},
     {  name: 'Chemise femme m..xxl' , price :170 , image: 'https://www.stylewe.com/image/catalog/product/2022-11-25/df0ab4d752d564ed478b85631ec444a2.png'},
     {  name: 'Chemise enfants s' , price :120 , image: 'https://th.bing.com/th/id/OIP.RLG3g9chVAX8uixom7OlRQHaJj?rs=1&pid=ImgDetMain'},
-    {  name: 'Chemise enfants s' , price :130 , image: 'https://www.pyjama-orangerie.com/1323-thickbox_default/chemise-de-nuit-fille-bernadette-blanc.jpg'},
+    {  name: 'Chemise enfants s&l' , price :130 , image: 'https://www.pyjama-orangerie.com/1323-thickbox_default/chemise-de-nuit-fille-bernadette-blanc.jpg'},
     { id: 2, name: 'Pantalon Sport' , price :220 , image: 'https://i.pinimg.com/originals/d4/17/f8/d417f82a50d6e061903d279113461cf0.jpg'},
 
     { id: 2, name: 'Pantalon Class s...xxl' , price :200 , image: 'https://c.imgz.jp/966/76947966/76947966b_b_80_500.jpg'},
@@ -45,18 +45,41 @@ export class ProductService {
     return this.cart;
   }
  
-  addTocart(product:any){
-    this.cart.push(product);
+  // addTocart(product:any){
+  //   this.cart.push(product);
   
-  }
+  // }
   
-  removeFormCart(product : any){
-    const i =this.cart.indexOf(product);
-    if(i > -1){
-      this.cart.splice(i,1);
+  // removeFormCart(product : any){
+  //   const i =this.cart.indexOf(product);
+  //   if(i > -1){
+  //     this.cart.splice(i,1);
      
+  //   }
+  // }
+  addToCart(product: any) {
+    // Vérifiez si le produit existe déjà dans le panier
+    const existingProduct = this.cart.find((item:any) => item.name === product.name);
+    if (existingProduct) {
+      // Si le produit existe, augmentez la quantité
+      existingProduct.quantity++;
+    } else {
+      // Sinon, ajoutez le produit avec une quantité initiale de 1
+      this.cart.push({ ...product, quantity: 1 });
     }
   }
+
+  removeFromCart(product: any) {
+    // Retirez le produit du panier ou diminuez la quantité
+    const index = this.cart.findIndex((item:any) => item.name === product.name);
+    if (index !== -1) {
+      this.cart[index].quantity--;
+      if (this.cart[index].quantity === 0) {
+        this.cart.splice(index, 1);
+      }
+    }
+  }
+
 
 
 

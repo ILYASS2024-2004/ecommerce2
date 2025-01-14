@@ -125,7 +125,7 @@ pant=false;
  }
  imagee= 'https://shop.rnli.org/cdn/shop/files/rnli-finisterre-fisherman-beanie-ecru-navy-rs2342112env-29583843426400_x1400.jpg?v=1696330665'
   addToCart(product: any) {
-    this.productService.addTocart(product);
+    this.productService.addToCart(product);
    this.i++;
     this.adpl();
    this.showch();
