@@ -6,36 +6,36 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ProductService {
   products = [
-    {  name: 'Chemise homme' , price :150 , image: 'https://www.nodus.fr/53609-product_zoom/chemise-chevron-bleu.jpg'},
-    {  name: 'Chemise femme' , price :170 , image: 'https://th.bing.com/th/id/R.eace49725779b008983777dd94ec3461?rik=4o%2b0LBBn%2ffFtxA&pid=ImgRaw&r=0'},
-    {  name: 'Chemise enfants' , price :120 , image: 'https://th.bing.com/th/id/OIP.RLG3g9chVAX8uixom7OlRQHaJj?rs=1&pid=ImgDetMain'},
-    {  name: 'Chemise enfants' , price :130 , image: 'https://www.pyjama-orangerie.com/1323-thickbox_default/chemise-de-nuit-fille-bernadette-blanc.jpg'},
-    { id: 2, name: 'Pantalon Sport' , price :220 , image: 'https://image.made-in-china.com/2f0j00KtUkDQEsqzqb/OEM-ODM-Non-Stretch-Quality-Straight-Fit-with-Patch-Pocket-on-Front-and-Side-High-Waisted-off-White-New-Fashion-Lady-Jeans.jpg'},
+    {  name: 'Chemise homme xl xxl' , price :150 , image: 'https://i.pinimg.com/736x/e9/31/34/e931343c6bc6706560602d4a177df83b.jpg'},
+    {  name: 'Chemise femme m..xxl' , price :170 , image: 'https://www.stylewe.com/image/catalog/product/2022-11-25/df0ab4d752d564ed478b85631ec444a2.png'},
+    {  name: 'Chemise enfants s' , price :120 , image: 'https://th.bing.com/th/id/OIP.RLG3g9chVAX8uixom7OlRQHaJj?rs=1&pid=ImgDetMain'},
+    {  name: 'Chemise enfants s' , price :130 , image: 'https://www.pyjama-orangerie.com/1323-thickbox_default/chemise-de-nuit-fille-bernadette-blanc.jpg'},
+    { id: 2, name: 'Pantalon Sport' , price :220 , image: 'https://i.pinimg.com/originals/d4/17/f8/d417f82a50d6e061903d279113461cf0.jpg'},
 
-    { id: 2, name: 'Pantalon Class' , price :200 , image: 'https://th.bing.com/th/id/OIP.ZQhDuX5-lEbJGPCl3nH7iQAAAA?rs=1&pid=ImgDetMain'},
-    { id: 2, name: 'Pantalon ' , price :300 , image: 'https://i.pinimg.com/originals/0a/75/d4/0a75d4079f753337b1134c340362f7ac.jpg'},
+    { id: 2, name: 'Pantalon Class s...xxl' , price :200 , image: 'https://c.imgz.jp/966/76947966/76947966b_b_80_500.jpg'},
+    { id: 2, name: 'Pantalon Jeans m...xl' , price :300 , image: 'https://static.mercdn.net/item/detail/orig/photos/m88631829999_1.jpg?1667490880'},
 
-    { id: 3, name: 'Pantalon Jeans' , price :240 , image: 'https://th.bing.com/th/id/OIP.QKkMIHylVrQoKN70ihEUtgHaLH?rs=1&pid=ImgDetMain'},
-    { id: 4, name: 'T-shirt' , price :110 , image: 'https://th.bing.com/th/id/R.6c3ddd4f609acc5e3fff3e13255cfc15?rik=nMtuon3w6BIpiw&riu=http%3a%2f%2finikweb.com%2fwp-content%2fuploads%2f2015%2f02%2ft473kellygreen.jpg&ehk=ngEG5J4NY4mngHySwtGScfJOpm%2bFsWS9P0TPNj15Qww%3d&risl=&pid=ImgRaw&r=0'},
-    { id: 5, name: 'T-shirt Kids' , price :50 , image: 'https://artistfirst.com.au/cdn/shop/products/MassAppealDeadHeadsTeeFront_600x600.jpg?v=1655089182'},
-    { id: 5, name: 'T-shirt ' , price :150 , image: 'https://th.bing.com/th/id/OIP.5XTM2YvfxcKZ889J0ENi-wHaLH?rs=1&pid=ImgDetMain'},
+    { id: 3, name: 'Pantalon Bagy xxl' , price :240 , image: 'https://i.pinimg.com/originals/ac/77/19/ac7719ee85aa01a755bcbee6f285d91a.jpg'},
+    { id: 4, name: 'T-shirt Over s...xl' , price :110 , image: 'https://i.etsystatic.com/23975747/r/il/a3c9d8/5543935637/il_1080xN.5543935637_mql2.jpg'},
+    { id: 5, name: 'T-shirt Ventage S&M' , price :120 , image: 'https://i.etsystatic.com/45569174/r/il/5bf9e9/5310021233/il_1080xN.5310021233_coiz.jpg'},
+    { id: 5, name: 'T-shirt L' , price :150 , image: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/279071030-161152579634502-4881142862949582330-n-1653564190.jpg'},
 
-    { id: 5, name: 'T-shirt Over' , price :170 , image: 'https://th.bing.com/th/id/OIP.YQV_az6sSDpnICHKr-dorAAAAA?rs=1&pid=ImgDetMain'},
+    { id: 5, name: 'T-shirt Over s...xl' , price :170 , image: 'https://tse3.mm.bing.net/th?id=OIP.od4-FN5QEfQCyoFVqWrCiwAAAA&rs=1&pid=ImgDetMain'},
     
-    { id: 6, name: 'Jacket' , price :550 , image: 'https://www.fashionbeans.com/wp-content/uploads/2022/12/axelarigato_pufferjacket.jpg'},
-    { id: 6, name: 'Jacket cuire' , price :350 , image: 'https://th.bing.com/th/id/OIP.EwxY1W9q8IkUYzC7D2k0ZwHaHY?rs=1&pid=ImgDetMain'},
+    { id: 6, name: 'Jacket cuire L & XL' , price :550 , image: 'https://cdn.shopify.com/s/files/1/1090/7042/products/Pu-Chaqueta-Cuero-Vintage-Streetwear-Hip-Hop-Punk-Gothic-PU-Leather-Jackets-Cool-Outerwear-Men-New_2fe343f8-ac98-43ba-9ca2-a89b949dfed5.jpg?v=1582178140'},
+    { id: 6, name: 'Jacket L & XL' , price :350 , image: 'https://item-shopping.c.yimg.jp/i/n/koko777_mlyhoutjk109'},
 
-    { id: 6, name: 'Jacket' , price :400 , image: 'https://image1.superdry.com/static/images/optimised/zoom/upload9223368955666104448.jpg'},
-    { id: 7, name: 'Jacket Jeans' , price :250 , image: 'https://th.bing.com/th/id/OIP.Bag_vP6lFp-jLYQVK_WLZwAAAA?rs=1&pid=ImgDetMain'},
+    { id: 6, name: 'Jacket M...XL' , price :400 , image: 'https://image1.superdry.com/static/images/optimised/zoom/upload9223368955666104448.jpg'},
+    { id: 7, name: 'Jacket  L...XXL' , price :250 , image: 'https://image.made-in-china.com/2f0j00uqcoisNhyVkw/High-Quality-Jean-Jacket-Custom-Streetwear-Denim-Jacket-for-Men-Jeans-Jacket.webp'},
    
-    { id: 10, name: 'Sweat-shirt' , price :190, image: 'https://d1l6fqa7jeeusv.cloudfront.net/upload/all/bRc6bCaq4wa9YTFz7qsqpkTuwJktb4N461d0omjS.jpg'},
-    { id: 11, name: 'Sweat-shirt' , price :350 , image: 'https://th.bing.com/th/id/OIP.1vSZAfokwskYMfDQ_xF6KgHaHa?rs=1&pid=ImgDetMain'},
-    { id: 13, name: 'Sweat-shirt' , price :160 , image: 'https://th.bing.com/th/id/R.2a479f8908637adbc80167f394a31e08?rik=bttPW2STSg2yuA&pid=ImgRaw&r=0'},
-    { id: 14, name: 'Sweat-shirt' , price :80 , image: 'https://www.alphabroder.com/media/hires/9103_51_z.jpg'},
-        { id: 12, name: 'Chausseur Nike' , price :475 , image: 'https://content.sitesupply.co/assets/89f6eaea-ce3b-4e93-9a85-28aaad2ce43f?width=1080&height=1080'},
-{ id: 8, name: 'Chausseur' , price :350 , image: 'https://th.bing.com/th/id/R.d43caea15b8643c913d021d98df9a1b3?rik=MZOHler1V24AgQ&pid=ImgRaw&r=0'},
-    { id: 9, name: 'Chausseur' , price :250 , image: 'https://th.bing.com/th/id/OIP.gQb-LXgLIxhF27l7XElnQgAAAA?rs=1&pid=ImgDetMain'},
-    { id: 15, name: 'Chausseur Class' , price :450 , image: 'https://www.commeuncamion.com/content/uploads/2014/02/chaussures-classe-brogues-septieme-largeur.jpg'},
+    { id: 10, name: 'Sweat-shirt l' , price :190, image: 'https://ae01.alicdn.com/kf/HTB1rHklIuOSBuNjy0Fdq6zDnVXaC/Privathinker-Men-Clothing-2018-Mens-Stripe-Streetwear-Hoodies-Cotton-Male-Hiphop-Korean-Oversized-Sweatshirt-Plus-Size.jpg'},
+    { id: 11, name: 'Sweat-shirt m&l' , price :170 , image: 'https://th.bing.com/th/id/R.37360deaafcaee3af2a33efd9a9a05d2?rik=Si1FrJ%2fGsmG7MQ&pid=ImgRaw&r=0'},
+    { id: 13, name: 'Sweat-shirt s..xl' , price :160 , image: 'https://i.etsystatic.com/34394702/r/il/c275f9/5704332500/il_1080xN.5704332500_eypy.jpg'},
+    { id: 14, name: 'Sweat-shirt s..xxl' , price :180 , image: 'https://www.orezoria.com/wp-content/uploads/2024/02/Fire-Flame-Graphic-Y2K-Knitted-Sweater-Unisex-4.jpg'},
+        { id: 12, name: 'Chausseur Nike 37...44' , price :475 , image: 'https://down-th.img.susercontent.com/file/sg-11134201-7rcdc-lssjvq451awrcc'},
+{ id: 8, name: 'Chausseur 29...42' , price :350 , image: 'https://tse3.mm.bing.net/th?id=OIP.0BHfO1YvKZPns7lOjJUS_QHaE9&rs=1&pid=ImgDetMain'},
+    { id: 9, name: 'Chausseur 30...45' , price :250 , image: 'https://www.commeuncamion.com/content/uploads/2020/07/lanvin-sneakers.jpg'},
+    { id: 15, name: 'Chausseur Class 42...47' , price :450 , image: 'https://www.commeuncamion.com/content/uploads/2014/02/chaussures-classe-brogues-septieme-largeur.jpg'},
   ];
   cart : any = [];
   getProducts() {

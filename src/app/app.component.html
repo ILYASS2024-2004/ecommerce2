@@ -19,13 +19,13 @@
   <ul>
   
    
-    <li><a routerLink="/products">Produits</a></li>
-    <li><a 
+    <li><a [ngClass]="display ? 'l': 'd'" routerLink="/products">Produits</a></li>
+    <li><a [ngClass]="display ? 'l': 'd'" 
       routerLink="/cart">Paniers</a></li>
-    <li><i class="fa-solid fa-phone"></i></li>
-    <li><i class="fa-solid fa-envelope"></i></li>
+    <li><i [ngClass]="display ? 'fa-solid fa-phone l': 'fa-solid fa-phone d'" ></i></li>
+    <li><i [ngClass]="display ? 'fa-solid fa-envelope l': 'fa-solid fa-envelope d'" ></i></li>
    
-    <li><i (click)="toggleDisplay()" [ngClass]="display ? 'fa-solid fa-moon': 'fa-solid fa-sun'" ></i></li>
+    <li><i (click)="toggleDisplay()" [ngClass]="display ? 'fa-solid fa-moon l': 'fa-solid fa-sun d'" ></i></li>
   </ul>
 </nav>
 

@@ -1,0 +1,47 @@
+<br><br><br>
+<h1>Remplissez ce formulaire:</h1>
+<br><br><br>
+<div class="cont">
+    <form >
+        <h2>Formulaire de commande :</h2>
+
+      <div class="d"><label class="f" for="nom">Nome</label><input placeholder="Entrez votre prénom" id="nom" type="text"  required></div>
+      <div class="d">      <label for="pnom">Prénome</label><input id="pnom" type="text" placeholder="Entrez votre prénom" required  >
+
+
+      </div>
+      <div class="d">
+              <label for="pnum">Numéro</label><div class="pnum"><input id="pnum"  [(ngModel)]="inputnum" (input)="onch()" placeholder="Numéro de téléphone" type="tel" required  ></div>
+
+      </div>
+      
+      <div class="d">
+           <label>Ville</label>
+              <input class="form-control" placeholder="Choisir une ville" list="browsers" name="browser" id="browser">
+              <datalist id="browsers">
+                <option value="Fés">
+                <option value="Méknes">
+                <option value="Casablanca">
+                <option value="Agadir">
+                <option value="Tanger">
+                    <option value="Marakech"></option>
+                    <option value="Oujda"></option>
+                    <option value="Tetouane"></option>
+                    <option value="Houcima"></option>
+                   
+              </datalist> 
+      </div>
+              
+
+ <i class="fa-brands fa-shopify "></i>
+ <span>Shop Now</span>
+
+ <div class="valider">
+    <h4 class="text-light ">Total : {{ getTotal() }} MAD</h4>
+    <button class="btn btn-success">Acheter</button>
+  </div>
+
+    </form>
+</div>
+<br><br>
+<br>

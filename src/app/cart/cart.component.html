@@ -1,7 +1,8 @@
-<div class="container">
+<div *ngIf="isVisible1"  class="chec text-danger"><i id="hon" class="fa-solid fa-circle-xmark"></i></div>
+ <div class="container">
 <br><br><br><br>
 <audio id="rmo" src="../../assets/rmo.mp3"></audio>
-    <h2 class="text-light">Votre panier</h2>
+    <h2 class="text-light t">Votre panier</h2>
     <table class="table ">
       <thead>
         <tr>
@@ -21,8 +22,8 @@
       </tbody>
     </table>
     <div class="valider">
-      <h4 class="text-light">Total : {{ getTotal() }} MAD</h4>
-      <button class="btn btn-success">Valider</button>
+      <h4 class="text-light ">Total : {{ getTotal() }} MAD</h4>
+      <button class="btn btn-success"  routerLink="/formulaire">Valider</button>
     </div>
     
   </div>

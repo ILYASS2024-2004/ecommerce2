@@ -86,6 +86,7 @@ export class ProductsComponent implements OnInit {
     this.products = this.productService.getProducts();
     this.chan();
     this.ch();
+    
 
   
       // Synchronise la variable locale avec la valeur du service
@@ -117,11 +118,11 @@ pant=false;
 
 
  i=0;
+ 
  adpl(){
   var audio:any=document.getElementById("aud");
   audio.play();
  }
-  
  imagee= 'https://shop.rnli.org/cdn/shop/files/rnli-finisterre-fisherman-beanie-ecru-navy-rs2342112env-29583843426400_x1400.jpg?v=1696330665'
   addToCart(product: any) {
     this.productService.addTocart(product);

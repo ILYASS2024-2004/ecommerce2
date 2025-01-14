@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&family=Lilita+One&display=swap');
+h1{
+    border-left: solid 6px rgb(255, 255, 255);
+    color:white;
+    font-family: 'kavoon';
+    padding: 10px;
+    margin: 20px;
+
+}
+h2 {
+    color:white;
+    font-family: 'kavoon';
+    padding: 10px;
+    margin: 20px;
+}
+label{
+     color:white;
+    font-family: 'kavoon';
+    font-size: larger;
+    margin: 0 10px;
+
+}
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+form{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    width: 60%;
+    background: rgba(201, 197, 197, 0.548);
+    border-radius: 30px;
+    border: 6px solid black;
+    position: relative;
+   
+
+}
+form input{
+    border: black solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    text-align: center;
+   
+   outline: none;
+   transition: 300ms ease-in-out;
+
+}
+input:focus{
+    border: rgb(72, 192, 61) solid 2px !important;
+    outline: none;
+    box-shadow: 0px 0px 20px white;
+   
+}
+#pnum{
+    width: 100%;
+}
+
+
+i{
+    position: absolute;
+    font-size: 60px;
+    scale: 2;
+   top: -10%;
+   color:white;
+    left: -10px;
+}
+.d{
+    position: relative;
+    width: 70%;
+}
+.d label{
+    position: absolute;
+    left: 5%;
+    color: #000;transition: 300ms ease-in-out;
+    
+}
+.d input{
+    width: 100%;
+}
+.d:hover label{
+    transform: translateY(-14px);
+   background-image: linear-gradient(transparent 48%,white 52%);
+
+}
+span{
+    position: absolute;
+    color: white;
+    font-family: 'kavoon';
+    font-weight: 900;
+    letter-spacing: 3px;
+    top: 1%;
+    right: -10%;
+    font-size: 40px;
+    transform: rotateZ(50deg);
+    text-shadow: 1px 2px 0px #000000,1px -2px 0px #000000;
+    animation: b 1s infinite ease-in-out;
+    
+}
+@keyframes b {
+    from{
+
+
+    }
+    to{
+        scale: 1.5;
+        
+    }
+    
+}
+.valider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    align-self:center;
+    margin-bottom: 20px;
+    width: 100%;
+    font-family: 'kavoon';
+}
+.valider .btn{
+    padding: 8px;
+    width: 180px;
+    font-size: 18px;
+   
+}

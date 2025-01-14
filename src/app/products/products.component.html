@@ -13,7 +13,7 @@
     <div class="ecrit" [ngClass]="display ? 'ecritee':'ecrit'"   >
       <div>
       
-        <h1 id="ilyass-shop" class="text-center "></h1>
+        <h1 id="ilyass-shop" class="text-center d  "></h1>
         <br>
     <p>Bienvenue chez ILYASS_SHOP ! 
       Nous sommes ravis de vous 
@@ -78,9 +78,10 @@
 
 <div class="container ">
     <div class="row">
-      <div class=" col-6 col-sm-6 col-md-4 col-lg-3  " *ngFor="let product of products">
+      <div class=" col-6 col-sm-6 col-md-4 col-lg-3 brd  " *ngFor="let product of products">
         <ng-container *ngIf="chemis==true && product.name.includes('Chemise') || disp==true || pant==true && product.name.includes('Pantalon') || swt==true && product.name.includes('Sweat-shirt') || jck==true && product.name.includes('Jacket')|| sho==true && product.name.includes('Chausseur') || tsh==true && product.name.includes('T-shirt') ">
-           <div class="card bscro w-100 m-2 ">
+         
+            <div class="card bscro w-100 m-2 ">
           <img id="im" [src]="product.image" class="card-img-top size " alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>
@@ -88,6 +89,8 @@
             <button class="btn btt" (click)="addToCart(product)">Ajouter au panier</button>
           </div>
         </div>
+
+           
         </ng-container>
        
       </div>
@@ -96,3 +99,4 @@
   
   
 </div>
+<br><br>

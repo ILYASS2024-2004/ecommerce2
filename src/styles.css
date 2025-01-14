@@ -5,9 +5,18 @@
 body{
     background-image: linear-gradient(to right,#30393E,#988F88);
         /* background-image: linear-gradient(to right,#262a2c,#988F88); */
+       
+     
+      
 
     font-family: "Lilita One", sans-serif;
 }
+
+        /* background-image: linear-gradient(to right,#628091,#d8cbc1); */
+
+
+ 
+
 #con{
     display: none;
 }
@@ -61,9 +70,9 @@ body{
 }
 
 .footer-container {
-    max-width: 95%;
-    margin: 0 auto;
-    background-color: #faefeb42;
+    width: 100%;
+  
+   
     border-radius: 10px;
     transition: 1s;
  display: flex;
@@ -72,9 +81,7 @@ body{
     font-family: "Lilita One", sans-serif;
    
 }
-.footer-container:hover{
-    box-shadow: 0px 0px 10px 10px #eeeae8;
-}
+
 .ma{
     margin: 5px;
 
@@ -105,11 +112,102 @@ i{
     background-color: #f8e5d7b0;
 }
 iframe{
-  
+   
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px #EDEBE0;
    
 }
-.aa{
-    border: solid 4px black;
+.aa{border: solid 4px black;
+
 }
+
+.contg{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+ 
+    gap: 20px;
+
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+.logos{
+    overflow: hidden;
+    padding: 5px 0;
+    background-color: rgba(255, 255, 255, 0.829);
+      white-space: nowrap;
+      width: 99%;
+      margin: 0 auto;
+      border: solid 4px black;
+      border-radius: 10px;
+      position: relative;
+}
+.logos-slide{
+    display: inline-block;
+ 
+    animation: 10s slide infinite linear;
+  
+}
+.logos-slide img{
+    height: 50px;
+    width: 150px;
+    margin: 0 15px;
+    
+}
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+    height: 100%;
+   background: linear-gradient(to left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.829));
+  
+    content: "";  
+    z-index: 555;
+
+}
+.logos::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8%;
+    height: 100%;
+   background: linear-gradient(to right,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.863));
+  
+    content: ""; 
+     z-index: 555;
+
+}
+
+
+
+@media  (max-width:600px){
+    .aa{
+        display: none
+    }
+    .logos-slide img{
+        height: 30px;
+        width: 100px;
+        margin: 0 10px;
+        
+    }
+   
+   
+
+} 
+    
+
+
+
+
+
