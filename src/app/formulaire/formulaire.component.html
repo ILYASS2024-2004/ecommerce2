@@ -94,15 +94,23 @@
 <br><br>
 <br>
 <div class="ajc ">
-  <div class="cti">
-    <input type="text" [(ngModel)]="react.comment">
-    <br>
-    <input type="text" [(ngModel)]="react.image">
-    <input type="text" [(ngModel)]="react.name">
-    <br>
-    <button class="btn btn-success" (click)="ajout()">ajouter</button>
+  <h1>Les commentaires:</h1>
+  <div class="spn" >
+    <p>Nome:</p>
+    <p>Commentaire:</p>
+    <p>Image:</p>
   </div>
+  <div class="cti">
+    <input type="text" [(ngModel)]="react.name">
+    <input type="text" [(ngModel)]="react.comment">
+ 
+    <input type="text" [(ngModel)]="react.image">
+    
+ 
+  </div>    <button class="btn btn-success" (click)="ajout()">ajouter</button>
+
 </div>
+<br><br>
 
 
 

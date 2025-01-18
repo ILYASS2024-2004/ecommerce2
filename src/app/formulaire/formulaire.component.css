@@ -285,10 +285,11 @@ canvas {
 
 }
 .card-list .card-item .user-p{
-  font-size: 1.15rem;
+  font-size: 1.20rem;
   margin: 10px 0 20px;
   font-weight: 500;
   text-align: center;
+ font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -306,6 +307,47 @@ canvas {
 .sb:hover{
   color: black;
 }
+
+.ajc{
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  align-items: center;
+  height: 300px;
+}
+.cti{ padding: 10px;
+  display: flex;
+ gap: 20px;
+  flex-flow: row;
+  align-items: center;
+ 
+  width: 100%;
+
+}
+.ajc button{
+  padding: 10px 30px;
+  font-family: 'kavoon';
+
+  font-size: 20px;
+}
+.spn{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+  font-family: 'kavoon';
+  font-size: 18px;
+}
+.cti input{
+ outline: none;
+ width: 100%;
+ border: 2px solid black;
+  border-radius: 10px;
+  padding: 6px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
   
 
   @media  (max-width:930px){
