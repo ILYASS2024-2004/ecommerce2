@@ -1,5 +1,11 @@
-import { Component, HostListener , OnInit } from '@angular/core';
+import {  Component, HostListener , OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
 
 
 @Component({
@@ -8,26 +14,140 @@ import { ProductService } from '../product.service';
   styleUrl: './formulaire.component.css'
 })
 export class FormulaireComponent implements OnInit {
+  pnom1:string='';
+  username: string = ''; 
+  react={
+    name: '',
+    comment:'',
+    image:''
+
+  }
+ 
+
+  reactions = [
+    {  name: 'rachid mvp' , comment : 'Cest Genial!', image: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/d07bca98931623.5ee79b6a8fa55.jpg'},
+    {  name: 'Salwa madani' , comment: 'Produit de très bonne qualité, exactement comme décrit. La livraison a été rapide et soignée.', image: 'https://img.freepik.com/photos-premium/avatar-fille-dessin-anime-conception-personnage-3d-jolie-fille_432516-5514.jpg'},
+    {  name: 'Saad ogri ' ,comment:'Merci,Bon service😎👌',  image : 'https://th.bing.com/th/id/OIP.IhTc65L9U1RLoDiG4JNx6gHaHa?w=626&h=626&rs=1&pid=ImgDetMain'},
+    {  name: 'Houda flr' , comment : 'Les photos correspondent parfaitement au produit reçu. Je recommande vivement' , image: 'https://th.bing.com/th/id/OIP.6HGISThuCRrLtD8vQjijIAAAAA?rs=1&pid=ImgDetMain'},
+    {  name: 'Yassin vip' , comment : 'Le produit est bon, mais la livraison a pris plus de temps que prévu.' , image: 'https://img.freepik.com/premium-photo/3d-cartoon-character-bearded-man-with-glasses-pixar-style_899449-119236.jpg'},
+ {  name: 'Sara ElAnabi' , comment : 'Jaurais aimé plus de détails dans la description du produit pour mieux comprendre ses caractéristiques', image: 'https://img.freepik.com/premium-photo/waiterwaitress-digital-avatar-generative-ai_934475-9067.jpg'},
+
+];
+ajout(){
+this.reactions.push(this.react);
+this.react={
+  name: '',
+  comment:'',
+  image:''
+
+}
+}
+
+
+
+
+
+
+
+
   cart : any[] =[];
   canvas!: HTMLCanvasElement;
   ctx!: CanvasRenderingContext2D;
   fireworks: any[] = [];
   colors = ['#ff0000', '#ffff00', '#00ff00', '#00ffff', '#ff00ff'];
   shapes = ['circle', 'star', 'square'];
+  display:boolean=false;
 
     constructor(private productService: ProductService){}
+
+
+
     ngOnInit() {
+      // const swiper = new Swiper('.swiper', {
+      //   // Optional parameters
+      //   direction: 'vertical',
+      //   loop: true,
+      
+      //   // If we need pagination
+      //   pagination: {
+      //     el: '.swiper-pagination',
+      //   },
+      
+      //   // Navigation arrows
+      //   navigation: {
+      //     nextEl: '.swiper-button-next',
+      //     prevEl: '.swiper-button-prev',
+      //   },
+      
+      //   // And if we need scrollbar
+      //   scrollbar: {
+      //     el: '.swiper-scrollbar',
+      //   },
+      // });
+      const swiper = new Swiper('.slider-warpper', {
+        // // Optional parameters
+      
+        loop: true,
+        grabCursor: true,
+        spaceBetween: 30,
+    
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+       
+    
+        //reponsive breakpoints
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            620: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            }
+        }
+    
+    
+    
+    
+      });
       this.cart = this.productService.getCart();
       this.canvas = document.getElementById('fireworks-canvas') as HTMLCanvasElement;
       this.ctx = this.canvas.getContext('2d')!;
       this.canvas.width = window.innerWidth;
       this.canvas.height = window.innerHeight;
       this.loop();
+      scroll(
+        {
+             top:0,
+             left:0,
+            
+        })
+        
+  // Synchronise la variable locale avec la valeur du service
+      this.productService.display$.subscribe((value) => {
+        this.display = value;})
 
+
+
+   
 
     }
 
-   
+    
 
   @HostListener('window:resize')
   onResize() {
@@ -123,8 +243,12 @@ export class FormulaireComponent implements OnInit {
     this.drawFireworks();
     requestAnimationFrame(() => this.loop());
   }
+ 
 
   launchFireworks() {
+    var audioh:any=document.getElementById("ohh");
+    audioh.currentTime=0;
+    audioh.play();
     let delay = 0;
     this.disp=true;
 
@@ -140,7 +264,6 @@ export class FormulaireComponent implements OnInit {
   }
 
 
-    username: string = ''; 
 
     getTotal() {
       return this.cart.reduce(
@@ -148,8 +271,8 @@ export class FormulaireComponent implements OnInit {
         0
       );
     }
-    nom1:string='';
-    pnom1:string='';
+
+
 
 
     disp:boolean=false;

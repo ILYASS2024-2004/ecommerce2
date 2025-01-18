@@ -1,3 +1,5 @@
+<div [ngClass]="display ? 'bac':''" >
+
 <div *ngIf="isVisible1"  class="chec text-danger"><i id="hon" class="fa-solid fa-circle-xmark"></i></div>
  <div class="container">
 <br><br><br><br>
@@ -6,6 +8,7 @@
     <table class="table ">
       <thead>
         <tr>
+          
           <th>Produit</th>
           <th>Prix</th>
           <th>Quantité</th>
@@ -15,9 +18,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of cart">
-          <td>{{ item.name }}</td>
+          <td>
+        {{ item.name }}
+          </td>
           <td>{{ item.price }} MAD</td>
-          <td>{{ item.quantity }}</td>
+          <td >{{ item.quantity}}</td>
           <td>{{ item.price * item.quantity }} MAD</td>
           <td>
             <button class="btn btn-danger" (click)="removeFromCart(item)">
@@ -33,4 +38,5 @@
     </div>
     
   </div>
+</div>
   

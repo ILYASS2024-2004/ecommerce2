@@ -4,14 +4,15 @@ h1{
     color:white;
     font-family: 'kavoon';
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
 
 }
 h2 {
     color:white;
     font-family: 'kavoon';
     padding: 10px;
-    margin: 20px;
+    margin: 10px;
+    text-align: center;
 }
 label{
      color:white;
@@ -25,19 +26,23 @@ label{
     justify-content: center;
     align-items: center;
     padding: 30px;
+
+
+  
 }
+
 .form{
-    padding: 30px;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
     flex-flow: column;
-    height: 100%;
-    width: 60%;
+    height: 50%;
+    width: 50%;
     background: rgba(201, 197, 197, 0.548);
     border-radius: 30px;
-    border: 6px solid black;
+    border: 4px solid black;
     position: relative;
    
 
@@ -76,11 +81,11 @@ i{
 }
 .d{
     position: relative;
-    width: 70%;
+    width: 95%;
 }
 .d label{
     position: absolute;
-    left: 5%;
+    left: 4%;
     color: #000;transition: 300ms ease-in-out;
     
 }
@@ -151,7 +156,8 @@ span{
 canvas {
     position: fixed;
     top:0;
-    left: 0;
+    right: 0;
+    z-index: -1;
   }
   select{
     width: 100%;
@@ -162,4 +168,174 @@ canvas {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
 
+  }.bac{
+   
+    background-image: linear-gradient(to right,#bec8d3,#e6e8f8);
+  
+    
+}
+
+.social {
+  
+    position: relative;
   }
+  .heart {
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-18px);
+  }
+  
+  .heart__svg {
+    width: 18px;
+    height: 29px;
+    color: rgb(126, 228, 126);
+  }
+  svg{
+    scale: 4;
+    color: rgb(121, 231, 121) !important;
+  }
+  .heart_1 {
+    animation: 2.4s move-heart-left ease-out infinite;
+  }
+  .heart_2 {
+    animation: 2.4s move-heart-right 0.4s ease-out infinite;
+  }
+  .heart_3 {
+    animation: 2.4s move-heart-left 0.8s ease-out infinite;
+  }
+  .heart_4 {
+    animation: 2.4s move-heart-right 1.2s ease-out infinite;
+  }
+  .heart_5 {
+    animation: 2.4s move-heart-left 1.6s ease-out infinite;
+  }
+  .heart_6 {
+    animation: 2.4s move-heart-right 2s ease-out infinite;
+  }
+  @keyframes move-heart-left {
+    0% {
+      opacity: 1;
+      top: 25px;
+      right: -20px;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      opacity: 0;
+      top: -60px;
+      right: -55px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  @keyframes move-heart-right {
+    0% {
+      opacity: 1;
+      top: 25px;
+      right: -20px;
+      width: 12px;
+      height: 12px;
+    }
+    100% {
+      opacity: 0;
+      top: -40px;
+      right: -65px;
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+.slider-warpper {
+ 
+  max-width: 1200px;
+  margin: 0 70px 55px;
+  overflow: hidden;
+}
+.conts{
+  box-sizing: border-box;
+}
+
+
+
+
+.card-list .card-item {
+  color: white;
+  background: rgba(255,255,255,0.2);
+  user-select: none;
+  padding: 20px;
+  border-radius: 8px;
+  height: 420px;
+  border: 1px solid  rgba(255,255,255,0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column;
+ backdrop-filter: blur(30px);
+ overflow: auto;
+
+}
+.card-list .card-item .user-i{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid white;
+  padding: 4px;
+ 
+
+}
+.card-list .card-item .user-p{
+  font-size: 1.15rem;
+  margin: 10px 0 20px;
+  font-weight: 500;
+  text-align: center;
+
+}
+
+.swiper-pagination {
+  
+  color:white !important;
+  
+  scale: 2;
+}
+.sb{
+  color:white;
+  margin-top: -50px;
+  transition: 200ms ease-in-out;
+}
+.sb:hover{
+  color: black;
+}
+  
+
+  @media  (max-width:930px){
+ .cont,.form{
+    width: 100%;
+ }
+ input,select{
+    width: 100%;
+    font-size: 12px
+ }
+ span{
+    display: none;
+ }
+ label{
+    display: none;
+ }
+ .d{
+    width: 100%;
+ }
+ .heart {
+display: none;
+}
+
+.heart__svg {
+display: none
+}
+
+
+   
+   
+
+} 
+    

@@ -5,12 +5,16 @@
   <title>EcommerceApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <div id="ilyass">
+    
+ 
     <i class="fa-brands fa-shopify fa-bounce"></i>
     <br><br>
    <h1 id="welcome" class="text-center" ></h1>
@@ -20,6 +24,7 @@
   </div>
  
   <div id="con">
+
 
 
  <app-root></app-root>
@@ -49,45 +54,19 @@
               width="90%" height="300"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
   
               </div>
-      </div>
-      <div class="logos">
-        <div class="logos-slide">
-          <img src="https://i.pinimg.com/originals/f7/e4/0c/f7e40ce0feb05bb5e3d83f1c9a60aafe.png">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/adidas-4-logo-png-transparent.png">
-          <img src="https://clipground.com/images/gucci-logo-clipart-transparent-9.png">
-          <img src="https://logos-world.net/wp-content/uploads/2020/04/Louis-Vuitton-Logo.png">
-          <img src="https://www.logolynx.com/images/logolynx/5b/5bb0a5d780617e54418f9bf71226aeaf.png">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/lacoste-logo-png-transparent.png">
-          <img src="https://logos-world.net/wp-content/uploads/2020/05/Versace-Logo-1997.png">
-          <img src="https://logos-download.com/wp-content/uploads/2016/02/Dior_logo.png">
+      </div><br>
 
-          <img src="https://th.bing.com/th/id/R.b2eea40473c46e04a7f79cb5aeeae5c1?rik=GkJNO5hbFt%2bczw&pid=ImgRaw&r=0">
-          <img src="https://static.vecteezy.com/system/resources/previews/022/100/836/original/puma-logo-transparent-free-png.png">
-          <img src="https://th.bing.com/th/id/R.26b6b754149c5af939b7723211283a19?rik=vvAUluE78LrgZQ&pid=ImgRaw&r=0">
-
-        </div>
-        <div class="logos-slide">
-          <img src="https://i.pinimg.com/originals/f7/e4/0c/f7e40ce0feb05bb5e3d83f1c9a60aafe.png">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/adidas-4-logo-png-transparent.png">
-          <img src="https://clipground.com/images/gucci-logo-clipart-transparent-9.png">
-          <img src="https://logos-world.net/wp-content/uploads/2020/04/Louis-Vuitton-Logo.png">
-          <img src="https://www.logolynx.com/images/logolynx/5b/5bb0a5d780617e54418f9bf71226aeaf.png">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/lacoste-logo-png-transparent.png">
-          <img src="https://logos-world.net/wp-content/uploads/2020/05/Versace-Logo-1997.png">
-          <img src="https://logos-download.com/wp-content/uploads/2016/02/Dior_logo.png">
-
-          <img src="https://th.bing.com/th/id/R.b2eea40473c46e04a7f79cb5aeeae5c1?rik=GkJNO5hbFt%2bczw&pid=ImgRaw&r=0">
-          <img src="https://static.vecteezy.com/system/resources/previews/022/100/836/original/puma-logo-transparent-free-png.png">
-          <img src="https://th.bing.com/th/id/R.26b6b754149c5af939b7723211283a19?rik=vvAUluE78LrgZQ&pid=ImgRaw&r=0">
-
-        </div>
-      </div>
+      <p style="font-family: 'Times New Roman', Times, serif;font-weight: 700;">&copy; 2025 EL-OGRI ILYASS. Tous droits réservés.</p>
+     
     </div>
    
   </footer>
  
 
   </div>
+
+ 
+
   <script>
     setTimeout(()=>{
 document.getElementById("ilyass").style.display='none';
@@ -120,6 +99,48 @@ function ch1(){
   
   }
   ch1();
+
+
+  const swiper = new Swiper('.slider-warpper', {
+    // // Optional parameters
+  
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
+
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+   
+
+    //reponsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        620: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+
+
+
+
+  });
 
 
 

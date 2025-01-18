@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
+
+
 import { ProductService } from '../product.service';
 import { AppComponent } from '../app.component';
 
@@ -7,19 +11,27 @@ import { AppComponent } from '../app.component';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
+
 export class ProductsComponent implements OnInit {
   products: any[] = [];
 
-  constructor(private productService: ProductService ,public di :AppComponent) {}
+  constructor(private productService: ProductService ,public di :AppComponent ) {}
   chan(){
+  
 
     var up1:any = document.getElementById('up');
+
     var crt:any = document.getElementById('crt');
+
     if(scrollY==0 ){
        up1.style.display='none';
             crt.style.display='none';
     }
-    window.onscroll= function() {
+    
+      // Code qui utilise `window` ici
+      console.log(window.location.href);
+      try{
+          window.onscroll= function() {
         if(scrollY >= 500){
             up1.style.display='block';
             crt.style.display='block';
@@ -30,7 +42,16 @@ export class ProductsComponent implements OnInit {
             crt.style.display='none';
             
         }
-    }
+      }
+      } catch(error){
+       console.log(error);
+      }
+
+      
+    
+    
+    
+    
     // up1.onclick= function(){
     
     //     scroll(
@@ -82,7 +103,9 @@ export class ProductsComponent implements OnInit {
   }
 
     display: boolean = false; // Variable locale
-  ngOnInit() {
+  
+  ngOnInit() { 
+  
     this.products = this.productService.getProducts();
     this.chan();
     this.ch();
@@ -105,7 +128,7 @@ export class ProductsComponent implements OnInit {
       this.isVisible=false;
     },600)
 
-  }
+  } ;
 
   
 pant=false;
@@ -117,17 +140,18 @@ pant=false;
  jck=false;
 
 
- i=0;
+
  
- adpl(){
-  var audio:any=document.getElementById("aud");
-  audio.play();
- }
+
+ i=0;
  imagee= 'https://shop.rnli.org/cdn/shop/files/rnli-finisterre-fisherman-beanie-ecru-navy-rs2342112env-29583843426400_x1400.jpg?v=1696330665'
   addToCart(product: any) {
     this.productService.addToCart(product);
-   this.i++;
-    this.adpl();
+    this.i++;
+
+    var audio:any=document.getElementById("aud");
+    audio.currentTime=0;
+  audio.play();
    this.showch();
   
    

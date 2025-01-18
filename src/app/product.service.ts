@@ -57,7 +57,9 @@ export class ProductService {
      
   //   }
   // }
+  i:number=0;
   addToCart(product: any) {
+    this.i++;
     // Vérifiez si le produit existe déjà dans le panier
     const existingProduct = this.cart.find((item:any) => item.name === product.name);
     if (existingProduct) {
@@ -66,10 +68,12 @@ export class ProductService {
     } else {
       // Sinon, ajoutez le produit avec une quantité initiale de 1
       this.cart.push({ ...product, quantity: 1 });
+      
     }
   }
 
   removeFromCart(product: any) {
+    this.i--;
     // Retirez le produit du panier ou diminuez la quantité
     const index = this.cart.findIndex((item:any) => item.name === product.name);
     if (index !== -1) {

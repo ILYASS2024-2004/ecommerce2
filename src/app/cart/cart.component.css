@@ -26,6 +26,11 @@ th{
     border-left: solid 5px white ;
    padding: 5px;
 }
+img{
+    height: 200px;
+    width: 200px;
+    
+}
 .valider{
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,10 @@ th{
     width: 180px;
     font-size: 18px;
    
+}
+.bac{
+   
+    background-image: linear-gradient(to right,#bec8d3,#e6e8f8);
 }
 
 .chec{

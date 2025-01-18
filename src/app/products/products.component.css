@@ -32,6 +32,7 @@ h1:hover{
 .card p, .card  .btn ,.card h5 {
     font-family: "Lilita One", sans-serif;
 }
+
 .card-body{
  
     border-radius: 20px;
@@ -96,13 +97,13 @@ opacity: 1;
    
 
 #sho{
-    height:60%;
+    height:58%;
     width: 30%;
     position: absolute;
     right:5%;
     border: solid 5px black;
     border-radius: 20px;
-    bottom: -15%;
+    bottom: -11%;
     transition: 1s ease-in-out;
    
   
@@ -139,10 +140,12 @@ opacity: 1;
 
 
 
+
 .af{
     position: relative;
-    transition: 500ms ease-in-out;
-}
+    transition: 500ms ease-in-out;}
+    
+
 @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
@@ -206,12 +209,6 @@ opacity: 1;
 .bac{
    
         background-image: linear-gradient(to right,#bec8d3,#e6e8f8);
-       
-    
-
-        
-   
-    
  }
  i{
     transition: 300ms ease-in-out;
@@ -311,10 +308,80 @@ opacity: 1;
     height: 100vh;
     display: flex ;
    align-items: center; 
+   position: relative;
+ 
    
  
   
 }
+
+.logos{
+    overflow: hidden;
+    padding: 2px 0;
+    background-color: rgba(255, 255, 255, 0.829);
+      white-space: nowrap;
+      width: 100%;
+      margin: 0 auto;
+      border-top: solid 2px black;
+      border-bottom:solid 2px black ;
+ 
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+}
+.logos-slide{
+    display: inline-block;
+ 
+    animation: 10s slide infinite linear;
+  
+}
+
+.logos-slide img{
+    height: 50px;
+    width: 60px;
+    margin: 0 15px;
+    
+}
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8%;
+    height: 100%;
+   background: linear-gradient(to left,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.829));
+  
+    content: "";  
+    z-index: 555;
+
+}
+.logos::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8%;
+    height: 100%;
+   background: linear-gradient(to right,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.863));
+  
+    content: ""; 
+     z-index: 555;
+
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+ 
+
+
 .ecrit{
    display: flex;
     align-items: center;
@@ -439,6 +506,9 @@ i{
     font-weight: 700;
 
 }
+body{
+    background-color: red;
+}
 .div5, .div4, .div7 ,.div3{
     border: 2px solid black;
     display: flex;
@@ -474,7 +544,7 @@ i{
    
    
 
-} ;
+} 
     
 
 
